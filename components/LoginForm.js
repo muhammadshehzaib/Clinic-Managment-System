@@ -33,7 +33,7 @@ export default function LoginForm() {
   };
 
   return (
-    <div className=" place-items-center flex flex-col gap-10">
+    <div className="place-items-center flex flex-col gap-10">
       <div className="shadow-lg p-5 rounded-lg border-t-4 border-green-400">
         <h1 className="text-xl font-bold my-4">Login</h1>
 

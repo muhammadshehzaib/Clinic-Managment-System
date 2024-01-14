@@ -19,7 +19,7 @@ export default async function handle(req, res) {
       age,
       specialization,
       contactNumber,
-      email,
+      // email,
       // password,
     } = req.body;
     const categoryDoc = await Doctor.create({
@@ -28,7 +28,7 @@ export default async function handle(req, res) {
       age,
       specialization,
       contactNumber,
-      email,
+      // email,
       // password,
     });
     res.json(categoryDoc);
@@ -42,7 +42,7 @@ export default async function handle(req, res) {
       age,
       specialization,
       contactNumber,
-      email,
+      // email,
       // password,
     } = req.body;
     const categoryDoc = await Doctor.updateOne(

@@ -25,18 +25,18 @@ const DoctorSchema = new Schema({
       message: "Invalid contact number format (must be 11 digits)",
     },
   },
-  email: {
-    type: String,
-    required: true,
-    unique: true,
-    lowercase: true,
-    validate: {
-      validator: function (value) {
-        return /\S+@\S+\.\S+/.test(value);
-      },
-      message: "Invalid email format",
-    },
-  },
+  // email: {
+  //   type: String,
+  //   required: true,
+  //   unique: true,
+  //   lowercase: true,
+  //   validate: {
+  //     validator: function (value) {
+  //       return /\S+@\S+\.\S+/.test(value);
+  //     },
+  //     message: "Invalid email format",
+  //   },
+  // },
   Appointment: [
     {
       type: mongoose.Types.ObjectId,

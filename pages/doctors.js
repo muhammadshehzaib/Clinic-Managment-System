@@ -10,17 +10,17 @@ function Doctor({ swal }) {
   const [categories, setCategories] = useState([]);
   const [age, setAge] = useState("");
   const [contactNumber, setContactNumber] = useState("");
-  const [email, setEmail] = useState("");
+  // const [email, setEmail] = useState("");
   const [specialization, setSpecialization] = useState("");
-  const [password, setPassword] = useState("");
+  // const [password, setPassword] = useState("");
 
-  const handleEmailChange = (event) => {
-    const value = event.target.value;
-    const isValidEmail = /\S+@\S+\.\S+/.test(value);
-    if (isValidEmail) {
-      setEmail(value);
-    }
-  };
+  // const handleEmailChange = (event) => {
+  //   const value = event.target.value;
+  //   const isValidEmail = /\S+@\S+\.\S+/.test(value);
+  //   if (isValidEmail) {
+  //     setEmail(value);
+  //   }
+  // };
 
   const handlecontactNumberChange = (event) => {
     const value = event.target.value;
@@ -46,8 +46,8 @@ function Doctor({ swal }) {
       age,
       specialization,
       contactNumber,
-      email,
-      password,
+      // email,
+      // password,
     };
     if (editedCategory) {
       data._id = editedCategory._id;
@@ -61,8 +61,8 @@ function Doctor({ swal }) {
     setAge("");
     setSpecialization("");
     setContactNumber("");
-    setEmail("");
-    setPassword("");
+    // setEmail("");
+    // setPassword("");
     fetchCategories();
   }
 
@@ -73,7 +73,7 @@ function Doctor({ swal }) {
     setAge(category.age);
     setSpecialization(category.specialization);
     setContactNumber(category.contactNumber), setEmail(category.email);
-    setPassword(category.password);
+    // setPassword(category.password);
     fetchCategories();
   }
   function deleteCategory(category) {
@@ -141,24 +141,6 @@ function Doctor({ swal }) {
             onChange={handlecontactNumberChange}
             placeholder="Enter contact number (up to 11 digits)"
           />
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            value={email}
-            onChange={handleEmailChange}
-            placeholder="Enter email"
-          />
-          <label htmlFor="password">
-            Password:
-            <input
-              type="password"
-              id="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              placeholder="Enter Password"
-            />
-          </label>
         </div>
 
         <div className="flex gap-1">
@@ -172,8 +154,8 @@ function Doctor({ swal }) {
                 setProperties([]);
                 setSpecialization("");
                 setContactNumber("");
-                setEmail("");
-                setPassword("");
+                // setEmail("");
+                // setPassword("");
               }}
               className="btn-default"
             >

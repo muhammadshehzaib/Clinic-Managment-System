@@ -121,7 +121,9 @@ function Doctor({ swal }) {
             min="1"
             max="90"
           />
-          <label htmlFor="">Specialization</label>
+          <label htmlFor="" value={specialization}>
+            Specialization
+          </label>
           <input type="text" />
           <label htmlFor="contactNumber">Contact No</label>
           <input

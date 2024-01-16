@@ -103,14 +103,18 @@ export default function Products() {
               <td className="py-2 px-4 text-center text-black">
                 {appointment?.Doctor?.name}
               </td>
-              <td
-                className="py-2 px-4 text-center "
-                onClick={() => deleteProduct(appointment._id)}
-              >
-                <button className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full">
-                  Delete
-                </button>
-              </td>
+              {session?.user?.email === "m.shehzaib.b@gmail.com" ? (
+                <td
+                  className="py-2 px-4 text-center "
+                  onClick={() => deleteProduct(appointment._id)}
+                >
+                  <button className="bg-red-500 hover:bg-red-600 text-white font-semibold py-2 px-4 rounded-full">
+                    Delete
+                  </button>
+                </td>
+              ) : (
+                ""
+              )}
             </tr>
           ))}
         </tbody>

@@ -21,7 +21,6 @@ export default async function handle(req, res) {
     const productDoc = await Patient.create({
       title,
       description,
-      price,
       category,
       age,
       contactNumber,
@@ -37,7 +36,6 @@ export default async function handle(req, res) {
       {
         title,
         description,
-        price,
         category,
         age,
         contactNumber,

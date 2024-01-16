@@ -25,6 +25,7 @@ const AppointmentForm = () => {
       [e.target.name]: e.target.value,
     });
   };
+
   const socketInitializer = async () => {
     await fetch("/api/socket");
     socket.on("connect", () => {

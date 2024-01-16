@@ -10,17 +10,7 @@ function Doctor({ swal }) {
   const [categories, setCategories] = useState([]);
   const [age, setAge] = useState("");
   const [contactNumber, setContactNumber] = useState("");
-  // const [email, setEmail] = useState("");
   const [specialization, setSpecialization] = useState("");
-  // const [password, setPassword] = useState("");
-
-  // const handleEmailChange = (event) => {
-  //   const value = event.target.value;
-  //   const isValidEmail = /\S+@\S+\.\S+/.test(value);
-  //   if (isValidEmail) {
-  //     setEmail(value);
-  //   }
-  // };
 
   const handlecontactNumberChange = (event) => {
     const value = event.target.value;
